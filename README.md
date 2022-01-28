@@ -1,1 +1,1 @@
-repository containing Pavan Shukla's files for COE332
+This repository contains all COE332 work for Pavan Shukla.
