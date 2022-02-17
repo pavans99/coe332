@@ -2,7 +2,7 @@
 The scripts contain functions that check the water turbidity level and the time until until the water is below the safety threshold. The scripts automatically download data from the given url and write them to a .json file. They also contain unit tests to check whether the routine runs properly and raises errors when incorrect input formats are passed to the functions. 
 
 <h2>analyze_water.py</h2>
-This script contains three functions, `turbidity_calc` and `min_time`. 
+This script contains three functions, turbidity_calc, min_time, and main. 
 <h3>turbidity_calc</h3>
 `turbidity_calc` calculates the turbidity of the water at a given time. The function takes two arguments: calibration constaint, a0, and detector current, I90. As shown in Equation 1, the function multiplies the two inputs and returns the water turbidity.
 <h3>min_time</h3>
