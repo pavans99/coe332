@@ -18,10 +18,10 @@ Two unit tests make sure that the min\_time returns the correct values when run 
 
 <h2>How to Run the Scripts</h2>
 <h3>analyze_water.py</h3>
-To run this script just execute analyze\_water.py on the command line. If the "requests" library is not installed run "pip3 install --user requests" on the command line before executing. Results are printed to the terminal where they can be read. Example results are shown:  
-Average turbidity based on last five measurements = 1.166279 NTU  
-WARNING:root:Turbidity is above threshold for safe use  
-Minimum time required to return below a safe threshold = 7.62 hours  
+To run this script just execute analyze\_water.py on the command line. If the "requests" library is not installed run "pip3 install --user requests" on the command line before executing. Results are printed to the terminal where they can be read. Example results are shown:\  
+Average turbidity based on last five measurements = 1.166279 NTU  \
+WARNING:root:Turbidity is above threshold for safe use  \
+Minimum time required to return below a safe threshold = 7.62 hours  \
 <h3>test_analyze_water.py</h3>
 To run this script just execute test\_analyze\_water.py on the command line. Pytest is embedded in the script, so pytest will automatically run when the script is executed. Alternatively, pytest can be run from the command line in the directory, which will return the same results. The results of pytest are printed to the terminal.
 <h2>How to download the data</h2>
