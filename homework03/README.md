@@ -2,13 +2,13 @@
 The scripts contain functions that check the water turbidity level and the time until until the water is below the safety threshold. The scripts automatically download data from the given url and write them to a .json file. They also contain unit tests to check whether the routine runs properly and raises errors when incorrect input formats are passed to the functions. 
 
 <h2>analyze_water.py</h2>
-This script contains three functions, turbidity\_calc and min\_time. 
+This script contains three functions, `turbidity_calc` and `min_time`. 
 <h3>turbidity_calc</h3>
-turbidity\_calc calculates the turbidity of the water at a given time. The function takes two arguments: calibration constaint, a0, and detector current, I90. As shown in Equation 1, the function multiplies the two inputs and returns the water turbidity.
+`turbidity_calc` calculates the turbidity of the water at a given time. The function takes two arguments: calibration constaint, a0, and detector current, I90. As shown in Equation 1, the function multiplies the two inputs and returns the water turbidity.
 <h3>min_time</h3>
-Using Equation 2, min\_time calculates the time until the water turbidity drops below the safety threshold of 1 NTU. The function takes two arguments: T0, the initial water turbidity, and d, the decay factor per hour expressed as a decimal. 
+Using Equation 2, `min_time` calculates the time until the water turbidity drops below the safety threshold of 1 NTU. The function takes two arguments: T0, the initial water turbidity, and d, the decay factor per hour expressed as a decimal. 
 <h3>main</h3>
-main downloads the turbidity data and saves it to a file called "turbidity\_data.json." The calibration constants and detector currents from the five most recent measurements are each averaged. These averages are passed to turbidity\_calc and the turbidity calculated is passed to min\_time. The turbidity measurement is printed to the terminal, whether it is above or below the safety threshold, and the time required for it to reach the safety threshold.
+main downloads the turbidity data and saves it to a file called "`turbidity_data.json`." The calibration constants and detector currents from the five most recent measurements are each averaged. These averages are passed to turbidity\_calc and the turbidity calculated is passed to `min_time`. The turbidity measurement is printed to the terminal, whether it is above or below the safety threshold, and the time required for it to reach the safety threshold.
 <h2>test_analyze_water.py</h2>
 This script contains 2 functions, test\_analyze\_water and test\_min\_time. Each function contains 5 unit tests for the function it is testing. 
 <h3>test_turbidity_calc</h3>
