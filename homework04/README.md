@@ -9,17 +9,15 @@ This function is also simple. The function accepts coordinates of latitude and l
 This function accepts a list of dictionaries of meteorite data. The number of meteors in each class is counted and returned in the form of a dictionary of class counts.
 <h3>main</h3>
 main accepts user input for meteorite data. The meteorite data must be in .json file and contain a list of dictionaries of meteorite data in the format specified by the sample data in the given .json file. An example of the proper format is shown below.
-    \{
-    "meteorite_landings": \[
-	\{
+	{
 	"name": "Ruiz",
 	"id": "10001",
 	"recclass": "L5",
 	"mass (g)": "21",
 	"reclat": "50.775",
 	"reclong": "6.08333",
-	"GeoLocation": "\(50.775, 6.08333\)"
-	\},
+	"GeoLocation": "(50.775, 6.08333)"
+	}
 
 
 
