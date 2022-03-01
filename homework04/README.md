@@ -11,9 +11,9 @@ This function accepts a list of dictionaries of meteorite data. The number of me
 main accepts user input for meteorite data. The meteorite data must be in .json file and contain a list of dictionaries of meteorite data in the format specified by the sample data in the given .json file. An example of the proper format is shown below.
 ```
 {
-{
+\{
   "meteorite_landings": [
-    {
+    \{
       "name": "Ruiz",
       "id": "10001",
       "recclass": "L5",
@@ -21,8 +21,8 @@ main accepts user input for meteorite data. The meteorite data must be in .json 
       "reclat": "50.775",
       "reclong": "6.08333",
       "GeoLocation": "(50.775, 6.08333)"
-    },
-    {
+    \},
+    \{
       "name": "Beeler",
       "id": "10002",
       "recclass": "H6",
@@ -30,7 +30,7 @@ main accepts user input for meteorite data. The meteorite data must be in .json 
       "reclat": "56.18333",
       "reclong": "10.23333",
       "GeoLocation": "(56.18333, 10.23333)"
-    },
+    \},
 ...
 }
 ```
