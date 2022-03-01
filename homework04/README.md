@@ -12,26 +12,29 @@ main accepts user input for meteorite data. The meteorite data must be in .json 
 ```
 {
 \{
-  "meteorite_landings": [
-    \{
-      "name": "Ruiz",
-      "id": "10001",
-      "recclass": "L5",
-      "mass (g)": "21",
-      "reclat": "50.775",
-      "reclong": "6.08333",
-      "GeoLocation": "(50.775, 6.08333)"
-    \},
-    \{
-      "name": "Beeler",
-      "id": "10002",
-      "recclass": "H6",
-      "mass (g)": "720",
-      "reclat": "56.18333",
-      "reclong": "10.23333",
-      "GeoLocation": "(56.18333, 10.23333)"
-    \},
+"meteorite_landings": [
+\{
+"name": "Ruiz",
+"id": "10001",
+"recclass": "L5",
+"mass (g)": "21",
+"reclat": "50.775",
+"reclong": "6.08333",
+"GeoLocation": "(50.775, 6.08333)"
+\},
+\{
+"name": "Beeler",
+"id": "10002",
+"recclass": "H6",
+"mass (g)": "720",
+"reclat": "56.18333",
+"reclong": "10.23333",
+"GeoLocation": "(56.18333, 10.23333)"
+\},
 ...
+
+
+
 }
 ```
 
@@ -67,8 +70,6 @@ The CI1 class was found 1 times
 The L/LL4 class was found 1 times
 The Eucrite-mmict class was found 1 times
 The CV3 class was found 1 times
-
-
 }
 ```
 
@@ -79,14 +80,14 @@ The CV3 class was found 1 times
 The image is pulled using one command:
 ```
 {
- git pull pavanshukla99/ml_data_analysis:hw04. 
+git pull pavanshukla99/ml_data_analysis:hw04. 
 }
 ```
 <h4>Building the Image</h4>
 Several components are needed to build the image. The Dockerfile provided on GitHub, the script ml_data_analysis.py, the script test_ml_data_analysis.py, and a .json data file in the required format are needed to build the image. test_ml_data_analysis.py will only work with the given sample data. If all the required files are present then the command:
 ```
 {
- docker build -t pavanshukla99/ml_data_analysis:hw04
+docker build -t pavanshukla99/ml_data_analysis:hw04
 }
 ```
 will run properly and build the image.
@@ -95,7 +96,7 @@ will run properly and build the image.
 To run the image using the sample data one must first pull down the image as described in the first step. Then the command:
 ```
 {
- docker run --rm -v $PWD:/data pavanshukla99/ml_data_analysis:hw04 ml_data_analysis.py /code/Meteorite_Landings.json
+docker run --rm -v $PWD:/data pavanshukla99/ml_data_analysis:hw04 ml_data_analysis.py /code/Meteorite_Landings.json
 }
 ```
 will run the ml_data_analysis.py for the sample data.
@@ -104,7 +105,7 @@ will run the ml_data_analysis.py for the sample data.
 The image must be pulled down first using the command given in the running using sample data step. Then the command:
 ```
 {
- docker run --rm -v $PWD:/data pavanshukla99/ml_data_analysis:hw04 ml_data_analysis.py /data/userdata.json
+docker run --rm -v $PWD:/data pavanshukla99/ml_data_analysis:hw04 ml_data_analysis.py /data/userdata.json
 }
 ```
 where userdata.json is a placeholder, will run ml_data_analysis.py for the user's input data. 
