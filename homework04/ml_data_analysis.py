@@ -3,7 +3,7 @@ import json
 from typing import List
 import logging
 import socket
-
+import sys
 format_str=f'[%(asctime)s {socket.gethostname()}] %(filename)s:%(funcName)s:%(lineno)s - %(levelname)s: %(message)s'
 logging.basicConfig(level=logging.WARNING, format=format_str)
 
@@ -77,8 +77,7 @@ def count_classes(a_list_of_dicts: List[dict], a_key_string: str) -> dict:
 
 def main():
     logging.debug('entering main loop')
-    user_input = str(input("File name:"))
-    with open(user_input, 'r') as f:
+    with open(sys.argv[1], 'r') as f:
         ml_data = json.load(f)
 
     logging.debug(f'the type of ml_data is {type(ml_data)}')
