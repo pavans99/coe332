@@ -14,7 +14,7 @@ The default redis image is pulled and the redis server is run using the commands
 	 docker pull redis:6
 	 docker run -d -p 6430:6379 -v $(pwd)/data:/data --name=hw5-redis redis:6 --save 1 1
 
-<h4>Pulling and Running the Flask Application</h4>
+<h3>Pulling and Running the Flask Application</h3>
 The Docker image is pulled and run using the commands:
 	
 	docker pull pavanshukla99/hw5:latest
@@ -25,7 +25,21 @@ First the repository must be pulled from GitHub using the command:
 	
 	git clone https://github.com/pavans99/coe332.git
 
-Then move into the directory coe332/homework05. At this point start the Redis server by executing the command specified in the instructions for running the Redis server. At this point there are two options. One can run the command 
+Then move into the directory coe332/homework05. At this point start the Redis server by executing the command specified in the instructions for running the Redis server. It should be noted that the Redis port may have changed. If the Redis port has changed, then the script app.py will have to be changed. To view the Redis container ID run the command:
+	
+	docker ps
+
+Then find the container ID associated with the name "hw5-redis". Then run 
+	
+	docker inspect <contained_id> | grep IPAddress
+
+Which will print the IP address. Line 11 of app.py is
+	
+	rd = redis.Redis(host='172.17.0.13', port=6379)
+
+The argument of "host" must be changed to whatever IP address was found using "docker inspect". The IP address given is the one that I usually had, but it occasionally changed when restarting the Redis server.
+
+At this point there are two options. One can run the command 
 	
 	make
 
