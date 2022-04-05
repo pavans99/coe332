@@ -79,7 +79,7 @@ Would be:
 	{'name': 'Jennifer', 'id': '10299', 'recclass': 'L5', 'mass (g)': '539', 'reclat': '-84.0579', 'reclong': '69.9994', 'GeoLocation': '(-84.0579, 69.9994)'}
 	{'name': 'Christina', 'id': '10300', 'recclass': 'H5', 'mass (g)': '4291', 'reclat': '-38.1533', 'reclong': '-46.7127', 'GeoLocation': '(-38.1533, -46.7127)'}
 
-The route to return all the data looks similar but has many more entries.
+Each line is list of a meteorite's data. The list contains parameters, such as the name of who discovered it, the mass, the class, and the location. The list is organized in order of key-value pairs. The route to return all the data looks similar but has many more entries.
 
 
 	
