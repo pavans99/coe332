@@ -18,6 +18,14 @@ Start all the pods, PVCs, and services with the command
 	kubectl apply -f <filename>.yml
 
 Repeat the command for each .yml file, replacing <filename> with the name of the file. Find the name of the debug deployment using the command
+	
+	kubectl get pods
+
+The name of the pod will have a form similar to deployment-python-debug-XXXXXXXX. Enter the debug deployment using the command
+	
+	kubectl exec -it <pod_name> -- /bin/bash
+Now one can make curl requests as shown in the following section.
+
 
 <h3>Making curl Requests to the Server</h3>
 The flask application has few routes. To download the data to the Redis server, the POST route is used as follows:
