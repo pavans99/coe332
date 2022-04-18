@@ -1,4 +1,4 @@
-<h1>Deploying Flask and Redis Servers to Kubernetes Cloud </h1>
+<h1>Deploying Flask and Redis Servers to the Kubernetes Cloud </h1>
 The objective of this assignment is to deploy the flask application built in Homework 5 to the Kubernetes cloud. The python code, Dockerfile, and Makefile are the same files used in the Homework 5. The only new files are the .yml files.
 <h2>Functions in app.py</h2>
 <h3>read_data</h3>
