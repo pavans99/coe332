@@ -35,6 +35,7 @@ Now one can make curl requests as described in the following section.
 
 <h3>Making curl Requests to the Server</h3>
 At this point it is important to note that the IP address of the Redis server changes sometimes. This can cause complications since the Redis server IP address is hardcoded into app.py. To make sure the correct IP address is being used one must edit app.py in a separate terminal that also contains the repository. Line 11 of app.py is shown:
+	
 	rd = redis.Redis(host=''10.103.4.36'', port=6379)
 
 The value of host must be changed to the IP address of the Redis service recorded earlier. Then the Flask application must be built and pushed to Docker Hub. Having to change app.py is not preferred, but I do not know a way to reference the correct IP address directly. Now go back to the debug shell in the other terminal. 
