@@ -17,12 +17,12 @@ Pull down the git repository in the k8 shell and enter the directory /coe332/hom
 	
 	kubectl apply -f <filename>.yml
 
-Run the command
+Repeat the command for each .yml file, replacing <filename> with the name of the file. Run the command
 
 	kubectl get services
 Record the IP addresses for the Flask and Redis services. 
 
-Repeat the command for each .yml file, replacing <filename> with the name of the file. Find the name of the debug deployment using the command
+Find the name of the debug deployment using the command
 	kubectl get pods
 	
 The name of the pod will have a form similar to deployment-python-debug-XXXXXXXX. Enter the debug deployment using the command
