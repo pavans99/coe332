@@ -23,6 +23,7 @@ Repeat the command for each .yml file, replacing <filename> with the name of the
 Record the IP addresses for the Flask and Redis services. 
 
 Find the name of the debug deployment using the command
+	
 	kubectl get pods
 	
 The name of the pod will have a form similar to deployment-python-debug-XXXXXXXX. Enter the debug deployment using the command
