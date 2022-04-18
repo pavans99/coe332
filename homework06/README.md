@@ -13,32 +13,42 @@ First one must ssh onto a k8 cluster using the command
 
 	ssh <username>@coe332-k8s.tacc.utexas.edu
 
-Start all the pods, PVCs, and services with the command
+Pull down the git repository in the k8 shell and enter the directory /coe332/homework06. Start all the pods, PVCs, and services with the command
 	
 	kubectl apply -f <filename>.yml
 
-Repeat the command for each .yml file, replacing <filename> with the name of the file. Find the name of the debug deployment using the command
-	
-	kubectl get pods
+Run the command
 
+	kubectl get services
+Record the IP addresses for the Flask and Redis services. 
+
+Repeat the command for each .yml file, replacing <filename> with the name of the file. Find the name of the debug deployment using the command
+	kubectl get pods
+	
 The name of the pod will have a form similar to deployment-python-debug-XXXXXXXX. Enter the debug deployment using the command
 	
 	kubectl exec -it <pod_name> -- /bin/bash
-Now one can make curl requests as shown in the following section.
+
+Now one can make curl requests as described in the following section.
 
 
 <h3>Making curl Requests to the Server</h3>
-The flask application has few routes. To download the data to the Redis server, the POST route is used as follows:
+At this point it is important to note that the IP address of the Redis server changes sometimes. This can cause complications since the Redis server IP address is hardcoded into app.py. To make sure the correct IP address is being used one must edit app.py in a separate terminal that also contains the repository. Line 11 of app.py is shown:
+	rd = redis.Redis(host=''10.103.4.36'', port=6379)
+
+The value of host must be changed to the IP address of the Redis service recorded earlier. Then the Flask application must be built and pushed to Docker Hub. Having to change app.py is not preferred, but I do not know a way to reference the correct IP address directly. Now go back to the debug shell in the other terminal. 
+
+The flask application has a few routes. To download the data to the Redis server, the POST route is used as follows:
 	
-	curl -X POST localhost:5030/data
+	curl -X POST <FlaskIP>:5000/data
 	
-To access all the meteorite data, run the command:
+In this curl command and all other curl commands the value <FlaskIP> must be changed to the Flask service IP address recorded earlier. To access all the meteorite data, run the command:
 	
-	curl localhost:5030/data
+	curl <FlaskIP>:5000/data
 
 To access the data from a starting index run:
 	
-	curl localhost:5030/data/?start=XXX
+	curl <FlaskIP>:5000/data/?start=XXX
 
 Where XXX is the starting index provided by the user. 
 <h3>Example Outputs</h3>
@@ -48,7 +58,7 @@ If data is successfully read using the POST request, then the following message 
 
 An example output to the command: 
 	
-	curl localhost:5030/data/?start=295
+	curl <FlaskIP>:5000/data/?start=295
 
 Would be:
 	
