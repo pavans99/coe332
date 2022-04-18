@@ -1,12 +1,6 @@
 <h1>Deploying Flask and Redis Servers to the Kubernetes Cloud </h1>
 The objective of this assignment is to deploy the flask application built in Homework 5 to the Kubernetes cloud. The python code, Dockerfile, and Makefile are the same files used in the Homework 5. The only new files are the .yml files.
-<h2>Functions in app.py</h2>
-<h3>read_data</h3>
-This function reads the meteorite data to the Redis server.  
-<h3>print_data</h3>
-This function prints the meteorite data in json list form to the terminal with data for each meteorite on one line.   
-<h3>start_data</h3>
-This function prints the meteorite data in the same format as print_data but from a starting index specified in the URL. If a non-integer is passed as the start value, it will be rounded to the nearest integer. If the passed index is out of the data range, a message will be printed saying this.
+
 <h2>Instructions for Running</h2>
 <h3>Running the Application on Kubernetes</h3>
 First one must ssh onto a k8 cluster using the command 
