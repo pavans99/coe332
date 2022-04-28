@@ -1,5 +1,5 @@
 <h1>Midterm Flask API Routes Flowchart</h1>
-The flowchart describes the various API routes of the Flask application built in the Midterm. 
+The flowchart describes the various API routes of the Flask application built in the midterm. The midterm can be found here: https://github.com/pavans99/ISS_Position_And_Sighting_Data_Parser  
 
 <h2>Meaning of the Shapes</h2>
 The flowchart has three different shapes to specify the action taking place. Ovals indicate a request, rectangles indicate the output of a GET request, and the rhombus indicates the result of a POST request. The output of a GET request is data or informational text printed to the terminal. The result of a POST request is the downloading and reading of data, which does not have visible output to the user except for a short message confirming the data has been downloaded and read. 
