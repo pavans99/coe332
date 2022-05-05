@@ -1,4 +1,4 @@
-<h1>Flask Application for Reading Data To and From Redis Server </h1>
+<h1>Flask Application for Reading Meteorite Data To and From Redis Server </h1>
 There are five files in the repository, four of which are necessary to running the application. The script app.py contains the functions and routes needed to run the application. Dockerfile contains the instructions necessary to build the image of the flask application. requirements.txt contains the required libraries needed to run app.py. Makefile builds, runs, and pushes the Docker image. Makefile is not necessary to run the application, but it is easier to run the Makefile than build the image and run the container manually.
 <h2>Functions</h2>
 <h3>read_data</h3>
