@@ -1,4 +1,4 @@
-<h1>Refresher: Python Fundamentals<\h1>
+<h1>Refresher: Python Fundamentals</h1>
 
 ex1.py contains a script that determines if each integer in a list of 10 integers is odd or even. Modulus and a for loopare used to achieve the objective of the exercise.
 ex2.py finds all the prime numbers between 3 and 100 inclusive. This task is accomplished using a nested loop and by checking the modulus of each number in the list, say n, with all numbers that are less than (n/2)+1. If any of the moduli are zero then the number is not prime.
