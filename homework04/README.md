@@ -1,4 +1,4 @@
-<h1>Docker Practice</h1>
+<h1>Containerized Application for Parsing Meteorite Data</h1>
 The docker image comprises two scripts and one .json file with data. ml_data_analysis.py is the main script and contains the functions compute_average_mass, check_hemisphere, count_classes, and main. Main prints out summary data produced by the other three functions using data from the .json file. The second script, test_ml_data_analysis.py, contains unit tests for all functions besides main. The purpose of the assignment is to containerize the scripts so that anyone can run them if they download the docker iamge file. All code dependencies are built into the image.
 <h2>Functions</h2>
 <h3>compute_average_mass</h3>
