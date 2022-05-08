@@ -70,7 +70,8 @@ def read_data():
 def get_comets(comet):
     return(comet_data[4])
 
-def start_data()->str: 
+@app.route('/comets/trajectory/', methods= ["GET"])
+def plotraj()->str: 
     """
     Plots trajectory
     Args:
