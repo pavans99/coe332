@@ -109,7 +109,7 @@ def start_data()->str:
             rz.append(traj[j][2])
             vx.append(traj[j][3])
             vy.append(traj[j][4])
-            vz.append(traj[j][5]i)
+            vz.append(traj[j][5])
             if(rv[j][7]<tol and cond==0 and j>0):
                 curr = traj[j-1][6]/au2km        
                 cond=cond+1
@@ -166,8 +166,8 @@ def rv_data()->str:
             rz.append(traj[j][2])
             vx.append(traj[j][3])
             vy.append(traj[j][4])
-            vz.append(traj[j][5]i)
-            if(rv[j][7]<tol and cond==0 and j>0):
+            vz.append(traj[j][5])
+            if(traj[j][7]<tol and cond==0 and j>0):
                 curr = traj[j-1][6]/au2km
                 cond=cond+1
 
