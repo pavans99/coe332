@@ -1,0 +1,32 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pavan99-test-deployment
+  labels:
+    app: pavan99-test-redis
+    username: pavan99
+    env: test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pavan99-test-redis
+  template:
+    metadata:
+      labels:
+        app: pavan99-test-redis
+        username: pavan99
+        env: test
+    spec:
+      containers:
+        - name: pavan99-test
+          imagePullPolicy: Always
+          image: redis:6
+          volumeMounts:
+          - name: pavan99-test-data
+            mountPath: "/data"
+      volumes:
+      - name: pavan99-test-data
+        persistentVolumeClaim:
+          claimName: pavan99-test-data
