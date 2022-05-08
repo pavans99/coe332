@@ -58,11 +58,7 @@ def read_data()->str:
     url = 'https://data.nasa.gov/resource/b67r-rgxc.json'
     r = requests.get(url,allow_redirects=True)
     data=open('b67r-rgxc.json','wb').write(r.content)
-    with open('b67r-rgxc.json','r') as f:
-        x=json.load(f)
-        for i in range(len(x)):
-            z.append(str(i))
-            rd.set(str(i),json.dumps(x["meteorite_landings"][i]))
+   
     return "Data read \n"
 
 @app.route('/plot/',methods=['GET'])
