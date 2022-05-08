@@ -1,6 +1,8 @@
 import json
 from flask import Flask, request
 import redis
+import numpy as np
+import matplotlib.pyplot as plt
 
 app = Flask(__name__)
 #rd = redis.Redis(host='127.0.0.1', port = '6422', db=0) #change this later
