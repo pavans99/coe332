@@ -110,7 +110,7 @@ def start_data()->str:
             vx.append(traj[j][3])
             vy.append(traj[j][4])
             vz.append(traj[j][5])
-            if(rv[j][7]<tol and cond==0 and j>0):
+            if(traj[j][7]<tol and cond==0 and j>0):
                 curr = traj[j-1][6]/au2km        
                 cond=cond+1
         fig = plt.figure()
@@ -171,7 +171,7 @@ def rv_data()->str:
                 curr = traj[j-1][6]/au2km
                 cond=cond+1
 
-    return 'Meteorite data:\n' +'\n'.join(curr) +'\n'
+    return 'Position:\n' +'\n'.join(curr) +'\n'
  
 
 
